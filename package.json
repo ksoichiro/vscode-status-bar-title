@@ -2,7 +2,7 @@
 	"name": "vscode-status-bar-title",
 	"displayName": "Status Bar Title",
 	"description": "Show title on status bar",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "ksoichiro",
 	"author": {
 		"name": "Soichiro Kashima",

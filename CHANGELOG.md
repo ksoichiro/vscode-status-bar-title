@@ -6,6 +6,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.2] - 2020-10-09
+
 - Change icon on debugging
 
 ## [0.0.1] - 2020-10-09

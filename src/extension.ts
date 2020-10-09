@@ -10,6 +10,9 @@ export function activate(context: vscode.ExtensionContext) {
 
 function updateStatusBarItem(context: vscode.ExtensionContext): void {
 	const icon = context.extensionMode == vscode.ExtensionMode.Production ? '$(project)' : '$(debug)';
-	myStatusBarItem.text = `${icon} ${vscode.workspace.name}`;
-	myStatusBarItem.show();
+	const name = vscode.workspace.name;
+	if (name) {
+		myStatusBarItem.text = `${icon} ${name}`;
+		myStatusBarItem.show();
+	}
 }

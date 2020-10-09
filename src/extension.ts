@@ -2,13 +2,14 @@ import * as vscode from 'vscode';
 
 let myStatusBarItem: vscode.StatusBarItem;
 
-export function activate({ subscriptions }: vscode.ExtensionContext) {
+export function activate(context: vscode.ExtensionContext) {
 	myStatusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 10000);
-	subscriptions.push(myStatusBarItem);
-	updateStatusBarItem();
+	context.subscriptions.push(myStatusBarItem);
+	updateStatusBarItem(context);
 }
 
-function updateStatusBarItem(): void {
-	myStatusBarItem.text = `$(project) ${vscode.workspace.name}`;
+function updateStatusBarItem(context: vscode.ExtensionContext): void {
+	const icon = context.extensionMode == vscode.ExtensionMode.Production ? '$(project)' : '$(debug)';
+	myStatusBarItem.text = `${icon} ${vscode.workspace.name}`;
 	myStatusBarItem.show();
 }

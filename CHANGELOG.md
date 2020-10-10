@@ -6,6 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+- Do not show when name is undefined
+- Fix that development mode is not detected properly
+
 ## [0.0.2] - 2020-10-09
 
 - Change icon on debugging

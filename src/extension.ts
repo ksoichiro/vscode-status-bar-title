@@ -9,7 +9,10 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function updateStatusBarItem(context: vscode.ExtensionContext): void {
-	const icon = context.extensionMode == vscode.ExtensionMode.Production ? '$(project)' : '$(debug)';
+	// Workaround for detecting development mode:
+	// https://github.com/microsoft/vscode/issues/10272
+	const isDevelopment = vscode.env.sessionId === 'someValue.sessionId';
+	const icon = isDevelopment ? '$(debug)' : '$(project)';
 	const name = vscode.workspace.name;
 	if (name) {
 		myStatusBarItem.text = `${icon} ${name}`;

@@ -6,6 +6,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.3] - 2020-10-10
+
 - Do not show when name is undefined
 - Fix that development mode is not detected properly
 
